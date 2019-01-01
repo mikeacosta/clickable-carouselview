@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="2.3.4.231" />
+    <PackageReference Include="CarouselView.FormsPlugin" Version="4.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="CarouselImagesPage.xaml" />
+    <None Remove="App.xaml" />
+    <None Remove="alameda.jpg" />
+    <None Remove="sanfrancisco.jpg" />
+    <None Remove="sanleandro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CarouselImagesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App.xaml" />
+    <EmbeddedResource Include="alameda.jpg" />
+    <EmbeddedResource Include="sanfrancisco.jpg" />
+    <EmbeddedResource Include="sanleandro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="CarouselImagesPage.xaml.cs">
+      <DependentUpon>CarouselImagesPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

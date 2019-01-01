@@ -9,6 +9,7 @@ using Android.Widget;
 using Android.OS;
 using CarouselView.FormsPlugin.Abstractions;
 using CarouselView.FormsPlugin.Android;
+using CarouselImages.Core;
 
 namespace CarouselImages.Droid
 {
