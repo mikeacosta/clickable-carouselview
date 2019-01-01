@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarouselImages.iOS", "iOS\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarouselImages.Droid", "Droid\CarouselImages.Droid.csproj", "{3A06FA85-2194-486C-A7AB-DCD2A20AD420}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarouselImages.Core", "Core\CarouselImages.Core\CarouselImages.Core.csproj", "{1AE8D4A3-2A65-4E8E-9868-E90862EB06C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarouselImages.Core", "Core\CarouselImages.Core.csproj", "{1AE8D4A3-2A65-4E8E-9868-E90862EB06C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
