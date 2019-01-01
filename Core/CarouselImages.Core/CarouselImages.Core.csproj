@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.3.4.231" />
-    <PackageReference Include="CarouselView.FormsPlugin" Version="4.2.0" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="CarouselView.FormsPlugin" Version="5.2.0" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="CarouselImagesPage.xaml" />
@@ -16,11 +16,13 @@
     <None Remove="sanleandro.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Remove="CarouselImagesPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="CarouselImagesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="alameda.jpg" />
     <EmbeddedResource Include="sanfrancisco.jpg" />
     <EmbeddedResource Include="sanleandro.jpg" />
