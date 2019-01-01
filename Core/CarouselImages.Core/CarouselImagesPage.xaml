@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:CarouselImages" 
+    x:Class="CarouselImages.Core.CarouselImagesPage"
+    xmlns:converter="clr-namespace:CarouselImages.Core"
+    xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0">          
+        </OnPlatform>
+    </ContentPage.Padding>  
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:ImageConverter x:Key="imageConverter" Assembly="CarouselImages.Core" />
+        </ResourceDictionary>
+    </ContentPage.Resources>    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>          
+
+            <cv:CarouselViewControl ItemsSource="{Binding Images}"
+                Orientation="Horizontal" InterPageSpacing="10" Position="1" HorizontalOptions="FillAndExpand">
+                <cv:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <StackLayout BackgroundColor="#80000000" Padding="12">
+                                <Label TextColor="White" Text="{Binding Caption}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>                          
+                            <Image Aspect="AspectFill" Source="{Binding Name, Converter={StaticResource imageConverter}}">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}" NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>                             
+                            </Image>
+                        </StackLayout>
+                    </DataTemplate>
+                </cv:CarouselViewControl.ItemTemplate>
+            </cv:CarouselViewControl>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
